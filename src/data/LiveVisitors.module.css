@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    color: #1F8E3D;
+}
+
+.icon{
+    padding-right: 0.5rem;
+    font-size: 2rem;
+}
+
+.label{
+    font-weight: bold;
+}

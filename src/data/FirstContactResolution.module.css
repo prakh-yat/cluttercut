@@ -1,0 +1,31 @@
+/* .container{
+    display: flex;
+    justify-content: space-between;
+} */
+
+.container{
+    border: 0.5px solid #EEEEEE;
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1rem ;
+    border-radius: 8px;
+    background-color: rgba(54, 78, 239, 0.02);
+}
+
+.title{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.value{
+    padding: 1rem 0rem;
+    font-family: 'lato';
+    font-weight: bold;
+    font-size: 3rem;
+    color: #364EEF;
+}
+
+.box_b{
+    margin-top: 20px;
+}
+

@@ -1,0 +1,34 @@
+/* modal.module.css */
+
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1500;
+  }
+  
+  .modalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    color: #364EEF;
+  }
+  
+  .modalContent h2 {
+    margin-top: 0;
+  }
+  
+  h2{
+    color:#364EEF;
+    font-weight: bold;
+  }
+
+  button{
+    color:#364EEF;
+  }

@@ -1,0 +1,23 @@
+{"operator_conversations": [
+    {
+        "user_nickname": "Amelia Kelly", 
+        "num_conversations": 1, 
+        "num_resolved_conversations": 1
+    }, 
+    {
+        "user_nickname": "Anubhav Singh", 
+        "num_conversations": 3, 
+        "num_resolved_conversations": 3
+    }, 
+    {
+        "user_nickname": "Bruce Williams", 
+        "num_conversations": 60, 
+        "num_resolved_conversations": 12
+    }, 
+    {
+        "user_nickname": "Derek Jones", 
+        "num_conversations": 21, 
+        "num_resolved_conversations": 2
+    }, 
+    {
+        "user_nickname": "James Garcia", "num_conversations": 70, "num_resolved_conversations": 0}, {"user_nickname": "Jenny Davis", "num_conversations": 48, "num_resolved_conversations": 6}, {"user_nickname": "Lisa Jennings", "num_conversations": 57, "num_resolved_conversations": 1}, {"user_nickname": "Max Bennett", "num_conversations": 21, "num_resolved_conversations": 4}, {"user_nickname": "Megan Case", "num_conversations": 3, "num_resolved_conversations": 2}, {"user_nickname": "Michael Smith", "num_conversations": 76, "num_resolved_conversations": 5}, {"user_nickname": "Mike Thompson", "num_conversations": 51, "num_resolved_conversations": 1}, {"user_nickname": "Roman Hester", "num_conversations": 16, "num_resolved_conversations": 0}, {"user_nickname": "Sam Brown", "num_conversations": 1, "num_resolved_conversations": 1}, {"user_nickname": "Samantha Evans", "num_conversations": 51, "num_resolved_conversations": 6}]}

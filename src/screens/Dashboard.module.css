@@ -1,0 +1,69 @@
+.bg{
+  display: flex;
+}
+
+.main_content {
+
+  margin-left: 20%; /* Adjust this value to match the width of your sidebar */
+  padding: 2rem;
+  flex-grow: 1;
+  background-color: white;
+}
+
+.date_range{
+  display: flex;
+  flex-direction: column;
+  width: 24%;
+  font-size:1rem;
+  color: #091626;
+}
+
+.date_range_label{
+  padding-bottom: 0.5rem;
+}
+
+.operators_status{
+  border: 0.5px solid #EEEEEE;
+  margin-top: 2rem;
+  width: 100%;
+  color: #091626;
+  background-color: rgba(54, 78, 239, 0.02);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.operators_status .title{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.sentiment_chart{
+  border: 0.5px solid #EEEEEE;
+  width: 68%;
+  color: #091626;
+  background-color: rgba(54, 78, 239, 0.02);
+  border-radius: 8px;
+  padding: 1rem;
+
+}
+
+.sentiment_chart .title{
+    font-weight: bold;
+    font-size: 1.5rem;
+} 
+
+.small_kpi{
+
+  margin-top: 2rem;
+  width: 100%;
+  color: #091626;
+
+  display: flex;
+  align-items:center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.subtitle{
+  color: rgba(9, 22, 38, 0.3);
+}

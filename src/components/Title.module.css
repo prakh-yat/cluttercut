@@ -1,0 +1,36 @@
+.holder{
+    margin-top: 112px;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    color: rgba(9,22,38,0.4);
+    border-radius: 4px;
+    width: 85%;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.03);
+
+}
+
+.content{
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'lato';
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.icon{
+
+}
+.greetings{
+    padding-left: 0.5rem;
+}
+
+.date{
+    padding-left: 2rem;
+}

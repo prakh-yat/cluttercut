@@ -1,0 +1,168 @@
+.pagemain{
+  height: 100vh;
+}
+
+.bgimage{
+  position: fixed;
+  z-index: -2;
+  
+}
+
+
+
+.outerbox{
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  height: 100vh;
+  flex-direction: column;
+  padding-top: 7rem;
+}
+.outerbox .description{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.description .primary{
+  color: #091626;
+  font-size: 5rem;
+  padding: 0rem;
+}
+.primary span{
+  color: #364EEF;
+  font-weight: bold;
+}
+.description .secondary{
+  font-size: 5rem;
+  color: #364EEF;
+  font-weight: bold;
+}
+.description .tertiary{
+  padding: 1rem;
+  font-size: 1rem;
+  color: #091626;
+}
+.description .start{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #364EEF;
+  text-decoration: underline;
+  /* width: 40%; */
+}
+
+.start .getstarted {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  padding-top: 0;
+}
+.getstarted{
+  padding: 1rem;
+  padding-right: 0.5rem;
+  cursor: pointer;
+}
+.start .expert {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  padding-top: 0;
+}
+.expert div{
+  padding: 1rem;
+  padding-right: 0.5rem;
+}
+.innerbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20rem;
+}
+  
+.secondary span{
+  display: inline-block;
+  overflow: hidden;
+}
+
+.glitch{
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+    0.025em 0.04em 0 #fffc00;
+  animation: glitch 725ms infinite;
+}
+
+.glitch span {
+  position: absolute;
+  top: 1;
+  left: 0;
+}
+
+.glitch span:first-child {
+  animation: glitch 500ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  transform: translate(-0.04em, -0.03em);
+  opacity: 0.75;
+}
+
+.glitch span:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  transform: translate(0.04em, 0.03em);
+  opacity: 0.75;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+      0.025em 0.04em 0 #fffc00;
+  }
+  15% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+      0.025em 0.04em 0 #fffc00;
+  }
+  16% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+      -0.05em -0.05em 0 #fffc00;
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+      -0.05em -0.05em 0 #fffc00;
+  }
+  50% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+      0 -0.04em 0 #fffc00;
+  }
+  99% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+      0 -0.04em 0 #fffc00;
+  }
+  100% {
+    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+      -0.04em -0.025em 0 #fffc00;
+  }
+}
+
+
+.expert{
+  cursor: pointer;
+}
+
+.getstarted:hover{
+  cursor: pointer;
+  color: #091626;
+}
+
+.expert:hover{
+  color: #091626;
+}
