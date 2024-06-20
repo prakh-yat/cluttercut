@@ -12,6 +12,7 @@ import Keyword from '../data/Keyword';
 import FirstContactResolution from '../data/FirstContactResolution';
 import AddButton from '../components/AddButton';
 import AddVisualization from '../components/AddVisualization';
+import axios from 'axios';
 
 export default function Dashboard() {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -23,7 +24,7 @@ export default function Dashboard() {
   const handleCloseModal = () => {
     setIsModalVisible(false);
   };
-  const [liveVisitors, setLiveVisitors] = useState(null);
+  const [liveVisitorsData, setLiveVisitors] = useState(null);
   const [operatorsStatus, setOperatorsStatus] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -31,12 +32,12 @@ export default function Dashboard() {
     const fetchData = async () => {
       try {
         const token = localStorage.getItem('token');
-        
+        // console.log("TOKEN",token)
         // Fetch live visitors
-        const liveVisitorsResponse = await fetch('http://10.1.3.42:8000/live/7cc44f6d-29de-4a1a-9ac6-2211adbba7e9/', {
+        const liveVisitorsResponse = await fetch('http://127.0.0.1:8000/crispchat/live/', {
           method: 'GET',
           headers: {
-            'Authorization': `Bearer ${token}`,
+              'Authorization': `Bearer ${token}`,
           },
         });
 
@@ -47,8 +48,10 @@ export default function Dashboard() {
           console.error('Failed to fetch live visitors');
         }
 
+        
+
         // Fetch operator status
-        const operatorsStatusResponse = await fetch('http://10.1.3.42:8000/crispchat/operator_conversations/7cc44f6d-29de-4a1a-9ac6-2211adbba7e9/', {
+        const operatorsStatusResponse = await fetch('http://127.0.0.1:8000/crispchat/operator/stats/', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -57,7 +60,7 @@ export default function Dashboard() {
 
         if (operatorsStatusResponse.ok) {
           const operatorsStatusData = await operatorsStatusResponse.json();
-          console.log(operatorsStatusData)
+
           setOperatorsStatus(operatorsStatusData.operator_conversations);
         } else {
           console.error('Failed to fetch operator status');
@@ -106,7 +109,7 @@ export default function Dashboard() {
     { name: 'Inquisitive', value: 30 },
     { name: 'Angry', value: 5 },
   ];
-
+ 
   // Render loading indicator while data is being fetched
   if (loading) {
     return <div>Loading...</div>;
@@ -117,7 +120,7 @@ export default function Dashboard() {
       <Sidebar />
       <div className={styles.main_content}>
         {/* Your main content goes here */}
-        <LiveVisitors data={liveVisitors} />
+        <LiveVisitors data={liveVisitorsData} />
         <KeyCards data={conversation_status} />
         <div className={styles.date_range}>
           <div className={styles.date_range_label}>

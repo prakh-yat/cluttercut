@@ -24,7 +24,7 @@ export default function LiveVisitors({ data }) {
         <PiUsersThreeLight />
       </div>
       <div className={styles.data}>
-        {data.online_visitors} <span className={styles.label}>Online Visitors</span>
+        {data} <span className={styles.label}>Online Visitors</span>
       </div>
     </div>
   );

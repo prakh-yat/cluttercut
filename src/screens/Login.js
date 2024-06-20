@@ -28,7 +28,7 @@ const Login = () => {
     const handleLogin = async () => {
         const { email, password } = formData;
         try {
-            const response = await fetch('http://10.1.3.42:8000/crispchat/login/', {
+            const response = await fetch('http://127.0.0.1:8000/crispchat/login/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -39,6 +39,7 @@ const Login = () => {
                 const data = await response.json();
                 // Store token in local storage
                 localStorage.setItem('token', data.access);
+                // console.log(data)
                 // Redirect to Dashboard component after successful login
                 navigate('/dashboard');
             } else {
