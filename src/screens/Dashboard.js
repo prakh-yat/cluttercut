@@ -12,7 +12,7 @@ import Keyword from '../data/Keyword';
 import FirstContactResolution from '../data/FirstContactResolution';
 import AddButton from '../components/AddButton';
 import AddVisualization from '../components/AddVisualization';
-import axios from 'axios';
+// import axios from 'axios';
 
 export default function Dashboard() {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -65,6 +65,70 @@ export default function Dashboard() {
         } else {
           console.error('Failed to fetch operator status');
         }
+        
+        // fetch kwywords
+        const keywordsResponse = await fetch(`http://127.0.0.1:8000/crispchat/conversation/keywords/`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+          },
+        });
+
+        if (keywordsResponse.ok) {
+          const keywordsData = await keywordsResponse.json();
+          console.log('Keywords Data:', keywordsData);
+        } else {
+          console.error('Failed to fetch keywords data');
+        }
+
+
+        // fetch user sentiment count
+        const userSentimentResponse = await fetch(`http://127.0.0.1:8000/crispchat/user/sentiment/`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+          },
+        });
+
+        if (userSentimentResponse.ok) {
+          const sentimentData = await userSentimentResponse.json();
+          console.log('Sentiments Data:', sentimentData);
+        } else {
+          console.error('Failed to fetch sentiments data');
+        }
+
+        //fetch state
+        const stateResponse = await fetch(`http://127.0.0.1:8000/crispchat/conversation/state/`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+          },
+        });
+
+        if (stateResponse.ok) {
+          const stateData = await stateResponse.json();
+          console.log('State Data:', stateData);
+        } else {
+          console.error('Failed to fetch state data');
+        }
+
+        //fetch conversation status
+        const conversationStatusResponse = await fetch(`http://127.0.0.1:8000/crispchat/conversation/status/`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+          },
+        });
+
+        if (conversationStatusResponse.ok) {
+          const conversationStatusData = await conversationStatusResponse.json();
+          console.log('Conversation Status Data:', conversationStatusData);
+        } else {
+          console.error('Failed to fetch state data');
+        }
+
+
+
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
@@ -77,9 +141,9 @@ export default function Dashboard() {
 
   // Static data for other components
   const conversation_status ={
-    resolved_conversation: 420,
-    unresolved_conversation: 69,
-    pending_conversation: 8008,
+    resolved_conversation: 1,
+    unresolved_conversation: 1,
+    pending_conversation: 1,
   };
 
   const keyword = [
@@ -94,12 +158,12 @@ export default function Dashboard() {
     { name: 'error', value: 10 }
   ];
 
+
   const dummyData = [
     { date: '2024-01-01', totalConversations: 50, pendingConversations: 10, resolvedConversations: 30, unresolvedConversations: 10 },
     { date: '2024-01-02', totalConversations: 60, pendingConversations: 15, resolvedConversations: 35, unresolvedConversations: 10 },
     { date: '2024-01-03', totalConversations: 70, pendingConversations: 20, resolvedConversations: 40, unresolvedConversations: 10 },
     { date: '2024-01-04', totalConversations: 80, pendingConversations: 25, resolvedConversations: 45, unresolvedConversations: 10 },
-    // Add more data points as needed
   ];
 
   const sentimentData = [

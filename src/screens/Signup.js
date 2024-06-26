@@ -261,7 +261,7 @@ export default function Signup() {
                 throw new Error(errorData.detail || 'Failed to signup');
             }
 
-            const result = await response.json();
+            // const result = await response.json();
             // Handle successful signup, e.g., showing a success message
             setSuccessMessage('Signup successful! Please login.');
         } catch (error) {
